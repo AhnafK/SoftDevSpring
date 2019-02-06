@@ -1,4 +1,7 @@
-//Redchewahwah
+//Redchewahwah -- Ahnaf Kazi Ivan Zhang
+//SoftDev2 pd7
+//K #03: They lock us in the tower whenever we get caught
+//2019-02-05
 var anim = document.getElementById("circle");
 var stopbut = document.getElementById("stop");
 var c = document.getElementById("playground");
