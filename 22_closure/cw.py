@@ -30,39 +30,41 @@
 ##
 ##print(d(range(1,20)))
 ##
-##def repeat(w):
-##    def re(n):
-##        print(w*3)
-##    return re
-##
-##r1 = repeat("hello")
-##r2 = repeat("goodbye")
-##
-##r1(2)
-##r2(2)
-##repeat('cool')(2)
-##
-##def outer():
-##    x = "foo"
-##    def inner():
-##        nonlocal x
-##        x = "bar"
-##    inner()
-##    return x
-##print(outer())
-##print(x)
+def repeat(w):
+   def re(n):
+       print(w*3)
+   return re
 
+r1 = repeat("hello")
+r2 = repeat("goodbye")
+
+r1(2)
+r2(2)
+repeat('cool')(2)
+
+# def outer():
+#    x = "foo"
+#    def inner():
+#        nonlocal x
+#        x = "bar"
+#    inner()
+#    return x
+# print(outer())
+
+print('---')
 def make_counter():
     x = 0
-    def inc(x):
+    def inc():
         nonlocal x
         x+=1
         print(x)
-    return inc(x)
+    return inc
 
 ctr1 = make_counter()
 ctr1()
-
-
-
-
+ctr1()
+ctr2 = make_counter()
+ctr1()
+ctr2()
+ctr1()
+ctr2()
